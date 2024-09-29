@@ -1,0 +1,73 @@
+:host {
+  position: relative;
+  display: block;
+  top: 70px;
+  height: 100dvh;
+  img {
+    position: absolute;
+    width: var(--logo-width);
+    left: calc(50% - var(--logo-width) / 2);
+    top: 30px;
+    animation-name: logo;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  
+  }
+  &::after {
+    content: 'Good memories.';
+    font-size: var(--title-font-size);
+    font-weight: 500;
+    position: absolute;
+    color: var(--purple-color);
+    left: 20%;
+    bottom: 30%;
+    animation-name: text;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   
+  }
+}
+
+@keyframes logo {
+  0%,
+  20%,
+  60%,
+  80%,
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  10% {
+    opacity: 0;
+    transform: translate(0px, -30px);
+  }
+  70% {
+    opacity: 0;
+    transform: translate(-30px, 0px);
+  }
+}
+@keyframes text {
+  0%,
+  80%,
+  100%
+   {
+    content: "Good memories.";
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  20%,60% {
+    content: 'Search for lyrics.';
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  10% {
+    opacity: 0;
+    transform: translate(30px, 0px);
+  }
+  70% {
+    opacity: 0;
+    transform: translate(0px, -30px);
+  }
+}
