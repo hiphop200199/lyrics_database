@@ -3,7 +3,7 @@
   display: block;
   top: 70px;
   height: 100dvh;
-  img {
+  #logo {
     position: absolute;
     width: var(--logo-width);
     left: calc(50% - var(--logo-width) / 2);
@@ -16,8 +16,8 @@
   }
   &::after {
     content: 'Good memories.';
-    font-size: var(--title-font-size);
-    font-weight: 500;
+    font-size: var(--slogan-font-size);
+    font-weight: 700;
     position: absolute;
     color: var(--purple-color);
     left: 20%;
@@ -27,6 +27,27 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
    
+  }
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    left: calc(50vw - 25px);
+    bottom: 10%;
+    background-color: var(--purple-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    animation-name: down-arrow;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    img{
+      width: 80%;
+    }
   }
 }
 
@@ -69,5 +90,17 @@
   70% {
     opacity: 0;
     transform: translate(0px, -30px);
+  }
+}
+
+@keyframes down-arrow{
+  0%,25%,100%{
+    transform: translateY(0px);
+  }
+  5%,15%{
+    transform: translateY(-10px);
+  }
+  10%,20%{
+    transform: translateY(10px);
   }
 }

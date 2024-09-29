@@ -1,5 +1,123 @@
 :host{
+    position: relative;
+    scroll-snap-align:start;
     display: block;
     height: calc(100dvh - 70px - 30px);
     background-color: var(--purple-color);
+    #book-419589{
+        position: absolute;
+        left: 30%;
+        top: 10%;
+        width: clamp(10rem,10vw,10rem);
+        height: clamp(10rem,10vw,10rem);
+        object-fit: cover;
+        border-radius: var(--card-radius);
+        animation-name: pics-show-out;
+        animation-fill-mode: forwards;
+        animation-timeline: view();
+        animation-range-end: 50%;
+    }
+    #book{
+        position: absolute;
+        left: calc(30% + 7.5rem);
+        top: 20%;
+        width: clamp(10rem,10vw,10rem);
+        height: clamp(10rem,10vw,10rem);
+        object-fit: cover;
+        border-radius: var(--card-radius);
+        animation-name: pics-show-out;
+        animation-fill-mode: forwards;
+        animation-timeline: view();
+        animation-range-end: 50%;
+    }
+    #music-book{
+        position: absolute;
+        left: calc(30% + 15rem);
+        top: 30%;
+        width: clamp(10rem,10vw,10rem);
+        height: clamp(10rem,10vw,10rem);
+        object-fit: cover;
+        border-radius: var(--card-radius);
+        animation-name: pics-show-out;
+        animation-fill-mode: forwards;
+        animation-timeline: view();
+        animation-range-end: 50%;
+    }
+    #link{
+        position: absolute;
+        left: 35%;
+        bottom: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation-name: link-show-out;
+        animation-fill-mode: forwards;
+        animation-timeline: view();
+        animation-range-end: 50%;
+        *{
+            margin: 2px;
+        }
+        h1,p{
+            color: var(--light-color);
+        }
+        h1{
+            font-size: var(--title-font-size);
+        }
+        p{
+            font-size: var(--slogan-font-size);
+        }
+        a{
+            background-color: var(--light-color);
+            border-radius: 25px;
+            padding: 5px 25px;
+            text-decoration: none;
+            cursor: pointer;
+            color: var(--purple-color);
+            font-weight: 700;
+            filter: drop-shadow(2px 2px 2px var(--orange-color));
+        }
+    }
+}
+
+@keyframes pics-show-out{
+    from{
+        filter: grayscale(100%) blur(30px);
+        transform: rotateY(1turn);
+    }
+    to{
+        filter: none;
+        transform: none;
+    }
+}
+@keyframes link-show-out{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@media screen and (max-width:576px) {
+    :host{
+        #book-419589{
+            left: 2%;
+        }
+        #book{
+            left: 27%;
+        }
+        #music-book{
+            left: 52%;
+        }
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:768px){
+    :host{
+        #book-419589{
+            left: 3%;
+        }
+        #book{
+            left: 28%;
+        }
+        #music-book{
+            left: 53%;
+        }
+    }
 }
