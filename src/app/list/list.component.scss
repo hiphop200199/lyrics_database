@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  position: relative;
+  background-color: var(--light-color);
+  height: calc(100dvh  - 30px);
+  padding-top: 70px;//用襯裡版面比較不會亂掉
+
+}

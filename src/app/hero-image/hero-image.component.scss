@@ -3,6 +3,7 @@
   display: block;
   top: 70px;
   height: 100dvh;
+  background-color: var(--light-color);
   #logo {
     position: absolute;
     width: var(--logo-width);
@@ -12,7 +13,7 @@
     animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-  
+
   }
   &::after {
     content: 'Good memories.';
@@ -26,7 +27,7 @@
     animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-   
+
   }
   a{
     display: flex;
