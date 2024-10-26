@@ -1,3 +1,31 @@
-<h1>請輸入關鍵字來搜尋你想要的{{type}}</h1>
+
+
+<svg *ngIf="isLoading;else search_page"
+   width="209.5899"
+   height="318.46475"
+   viewBox="0 0 209.5899 318.46475"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="loading-image.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <g
+     inkscape:label="圖層 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-377.80424,-314.55963)">
+    <path
+       style="fill:none;stroke:#6d0346;stroke-width:15.0009;stroke-linecap:round;stroke-linejoin:round"
+       d="M 579.8937,431.48184 C 509.71084,414.87835 435.90853,375.39276 385.30192,322.05603 c 57.22911,102.94754 95.20198,244.38378 82.0028,275.65122 -13.58315,32.177 -86.71748,39.09723 -68.42403,6.30143 18.29345,-32.7958 81.77122,-45.3466 68.42403,-6.30143"
+       id="path10" />
+  </g>
+</svg>
+<ng-template #search_page>
+  <h1>請輸入關鍵字來搜尋你想要的{{type}}</h1>
 <p> 請確認是否有錯別字，或用不同的關鍵字重新查詢。</p>
 <input type="search" name="" id="">
+<img src="/search-pic.png" alt="" srcset="">
+</ng-template>

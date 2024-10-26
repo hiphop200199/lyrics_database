@@ -3,9 +3,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: calc(100dvh - 70px);
+    height: 100dvh;
+    padding-top: 70px;//用襯裡版面比較不會亂掉
     background-color: var(--yellow-color);
-    
+
     img{
         width: clamp(18rem,30vw,30rem);
         height: clamp(20rem,60%,25rem);

@@ -8,7 +8,7 @@ export const routes: Routes = [
   { path: 'homepage', component: HomePageComponent },
   { path: 'search/:type', component: SearchComponent },
   { path: 'list/:type', component: ListComponent },
-  { path: 'detail:/id', component: DetailComponent },
+  { path: 'detail/:id', component: DetailComponent },
   {
     path: '',
     redirectTo: '/homepage',
