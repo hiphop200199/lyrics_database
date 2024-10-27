@@ -2,7 +2,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { map, Observable, Subscription } from 'rxjs';
+import {  Subscription } from 'rxjs';
 import './songLink.interface';
 import songLink from './songLink.interface';
 
@@ -16,7 +16,7 @@ import songLink from './songLink.interface';
 })
 export class ListComponent implements OnInit,OnDestroy {
   subscription!:Subscription;
-  isLoading:boolean=false;
+  isLoading:boolean=true;
   filter:string|null='';
   keyword:string|null='';
   response:Object={};
@@ -31,6 +31,7 @@ export class ListComponent implements OnInit,OnDestroy {
     this.keyword = this.route.snapshot.queryParamMap.get('keyword');
    this.subscription = this.getSongs().subscribe(res =>{
     console.log(res);
+    this.isLoading = false;
     this.songList = res;
     })
   }

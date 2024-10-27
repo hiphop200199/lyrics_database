@@ -8,8 +8,8 @@
         position: absolute;
         left: 30%;
         top: 10%;
-        width: clamp(10rem,10vw,10rem);
-        height: clamp(10rem,10vw,10rem);
+        width: clamp(8rem,10vw,10rem);
+        height: clamp(8rem,10vw,10rem);
         object-fit: cover;
         border-radius: var(--card-radius);
         animation-name: pics-show-out;
@@ -21,8 +21,8 @@
         position: absolute;
         left: calc(30% + 7.5rem);
         top: 20%;
-        width: clamp(10rem,10vw,10rem);
-        height: clamp(10rem,10vw,10rem);
+        width: clamp(8rem,10vw,10rem);
+        height: clamp(8rem,10vw,10rem);
         object-fit: cover;
         border-radius: var(--card-radius);
         animation-name: pics-show-out;
@@ -34,8 +34,8 @@
         position: absolute;
         left: calc(30% + 15rem);
         top: 30%;
-        width: clamp(10rem,10vw,10rem);
-        height: clamp(10rem,10vw,10rem);
+        width: clamp(8rem,10vw,10rem);
+        height: clamp(8rem,10vw,10rem);
         object-fit: cover;
         border-radius: var(--card-radius);
         animation-name: pics-show-out;
@@ -104,6 +104,11 @@
         }
         #music-book{
             left: 52%;
+        }
+        #link{
+          position: relative;
+          left: 0;
+          top: 60%;
         }
     }
 }

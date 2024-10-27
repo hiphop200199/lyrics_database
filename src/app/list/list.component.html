@@ -22,10 +22,9 @@
   </g>
 </svg>
 <ng-template #list_page>
+  <h1>條件：{{filter}}<br>關鍵字：{{keyword}}<br>搜尋結果</h1>
 <ol>
   <li *ngFor="let song of songList;index as i">
     <a routerLink="../../detail/{{song.id}}" >{{i+1}}.{{song.name}}</a></li>
-  <li><a href="">1thtr</a></li>
-  <li><a href="">1tttttttttttte</a></li>
 </ol>
 </ng-template>

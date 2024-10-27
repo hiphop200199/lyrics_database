@@ -18,8 +18,12 @@ export class SearchComponent implements OnInit {
   isLoading:boolean=false;
   keyword:string='';
   startSearch():void{
-    console.log(this.keyword);
-    this.router.navigate(['list/'+this.type],{queryParams:{keyword:this.keyword}});//路徑加網址列參數
+    if(this.keyword){
+      console.log(this.keyword);
+      this.router.navigate(['list/'+this.type],{queryParams:{keyword:this.keyword}});//路徑加網址列參數
+    }else{
+      return;
+    }
   }
   ngOnInit(){
     this.type = this.route.snapshot.paramMap.get('type');//從快照中取得參數，因為路由不會一直改變
