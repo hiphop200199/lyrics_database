@@ -26,6 +26,6 @@
 <ng-template #search_page>
   <h1>請輸入關鍵字來搜尋你想要的{{type}}</h1>
 <p> 請確認是否有錯別字，或用不同的關鍵字重新查詢。</p>
-<input type="search" name="" id="">
+<input type="search" (change)="startSearch()" [(ngModel)]="keyword">
 <img src="/search-pic.png" alt="" srcset="">
 </ng-template>
